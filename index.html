@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h1>Checklist Generator</h1>
+    <form id="checklistForm">
+        <label for="selection">Select an option:</label>
+        <select id="selection" name="selection">
+            <option value="">Select...</option>
+            <option value="A">Option A</option>
+            <option value="B">Option B</option>
+        </select>
+
+        <div id="A-options" class="dynamic-options">
+            <label for="A-suboption">Enter something for A:</label>
+            <input type="text" id="A-suboption" name="A-suboption">
+        </div>
+
+        <div id="B-options" class="dynamic-options">
+            <label for="B-suboption">Enter something for B:</label>
+            <input type="text" id="B-suboption" name="B-suboption">
+        </div>
+
+        <button type="submit">Generate PDF</button>
+    </form>
+</body>
+</html>
